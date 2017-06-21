@@ -9,13 +9,23 @@
 <body>
     
 
-    <form method="post">
+    <form method="post" onsubmit="return addToDoItem()">
 
     <input id="toDoItem" type="text" placeholder ="new to-do item">
     <input type="submit" value="add">
 
     </form>
     <script type="text/javascript">
+        var toDoItems = []
+        function addToDoItem (){
+            var toDoItem = document.getElementById("toDoItem").value
+            toDoItems.push(toDoItem)
+            console.log(toDoItems)
+            return false
+        }
+
+        
+
     </script>
 </body>
 
